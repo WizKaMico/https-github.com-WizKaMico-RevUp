@@ -8,20 +8,18 @@
     <link rel="stylesheet" href="CSS/main.css"/>
 </head>
 <body>
-    <section>
+    <section style="background-color:#53e3a6;">
     <div class="container">
       <div class="user signinBx">
-        <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg" alt="" /></div>
-        <div class="formBx">
-          <form id="form1" runat="server" onsubmit="return false;">
+        <div class="imgBx"  style="background-color:white;"><img alt="" src="CSS/LOGO/PFVF_logo.png" style="width:100%; margin-top:170px; height:auto;"/></div>
+        <div class="formBx"  style="background-color:white;">
+          <form id="form1" runat="server" >
             <h2>Sign In</h2>
+              <asp:Label ID="lblResponse" runat="server" Text=""></asp:Label>
               <asp:TextBox ID="TextBox1" TextMode="Email" runat="server"></asp:TextBox>
               <asp:TextBox ID="TextBox2" TextMode="Password" runat="server"></asp:TextBox>
-              <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
-            <p class="signup">
-              Don't have an account ?
-              <a href="#" onclick="toggleForm();">Sign Up.</a>
-            </p>
+              <asp:Button ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click"/>
+            
           </form>
         </div>
       </div>
