@@ -114,6 +114,7 @@
     <Content Include="Verification.aspx" />
     <Content Include="Terms.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Reg_Information.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg_Information.aspx.cs">
+      <DependentUpon>Reg_Information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reg_Information.aspx.designer.cs">
+      <DependentUpon>Reg_Information.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="RevUp.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg_Information.aspx.cs" Inherits="RevUp.Reg_Information" %>
+
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -45,37 +46,45 @@
       
       <!--Main element-->
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
-          <h3>HI! <b><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></b> | EVENT PARTICIPANTS</h3>
+          <h3>HI! <b><asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></b> | CODE SPECIFIC FILE :  <b><asp:Label ID="lblCode" runat="server" Text=""></asp:Label></b></h3>
           <hr>
           <div class="table-responsive-sm">
-              <form runat="server">
-              <asp:TextBox ID="TextBox1" runat="server" TextMode="Number">  </asp:TextBox><asp:Button ID="Button1" runat="server" Text="SEARCH" OnClick="Button1_Click" style="margin-left:5px;"/> <asp:Button ID="Button2" runat="server" Text="NOTIFY MAIL" style="margin-left:5px;"  OnClick="Button2_Click"/>
-                  <hr />
-                  <asp:Label ID="lblMailResponse" runat="server" Text=""></asp:Label>
-                  <br />
-              <asp:GridView ID="GridView1" runat="server" Width="100%" AutoGenerateColumns="false" style="text-align:center;">
-                  <Columns>  
-                      <asp:HyperLinkField
-                        DataNavigateUrlFields="code"
-                        DataNavigateUrlFormatString="Reg_Information.aspx?code={0}"
-                        DataTextField="code"
-                        HeaderText="CODE"
-                        SortExpression="code" />
-                   
-                    <asp:BoundField DataField="fname" HeaderText="FIRST NAME" />  
-                    <asp:BoundField DataField="mname" HeaderText="MIDDLE NAME" />  
-                    <asp:BoundField DataField="lname" HeaderText="LAST NAME" /> 
-                    <asp:BoundField DataField="email" HeaderText="EMAIL" />  
-                
-                      <asp:TemplateField HeaderText="QR">
-                        <ItemTemplate>
-                           <img src='<%# Eval("QR") %>' Height="50" Width="100" />
-                        </ItemTemplate>
-                      </asp:TemplateField>
-                                    
-                </Columns>  
-              </asp:GridView>
-             </form>
+               <div class="row">
+                  <div class="col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">REGISTRANT INFORMATION</h5>
+                          <form runat="server">
+                          <asp:Label ID="lblFname" runat="server" Text="Firstname"></asp:Label>
+                          <br />
+                          <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                          <br />
+                          <br />
+                          <asp:Label ID="lblMname" runat="server" Text="Middlename"></asp:Label>
+                          <br />
+                          <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                          <br />
+                          <br />
+                          <asp:Label ID="lblLname" runat="server" Text="Lastname"></asp:Label>
+                          <br /> 
+                          <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                          <br />
+                          <br />
+                          <hr />
+                          <asp:Button ID="Button1" runat="server" Text="UPDATE" OnClick="Button1_Click"/>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">QR CODE</h5>
+                          <center><asp:Image ID="Image1" runat="server" /></center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
          </div>
           
        
